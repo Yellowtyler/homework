@@ -1,0 +1,43 @@
+.dom-wrapper {
+    @apply relative;
+    @apply place-content-center;
+    @apply max-w-96;
+    @apply m-auto;
+}
+
+.dom-table {
+    @apply w-full;
+    @apply text-sm;
+    @apply text-left;
+    @apply rtl:text-right;
+    @apply text-gray-500;
+    @apply dark:text-gray-400;
+
+    .dom-table-head {
+        @apply text-xs;
+        @apply text-gray-700;
+        @apply uppercase;
+        @apply bg-gray-50;
+
+        .dom-table-head-column {
+            @apply px-6 py-3;
+        }
+    }
+
+    .dom-table-row {
+        @apply border-b;
+
+        .dom-table-row-head {
+            @apply font-medium text-gray-900 whitespace-nowrap;
+        }
+
+        .dom-table-row-column {
+            @apply px-6 py-4;
+        }
+    }
+}
+
+.highlight {
+    @apply bg-red-700;
+    @apply text-white;
+}
