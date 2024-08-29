@@ -1,0 +1,47 @@
+<div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative px-4 py-4 max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between md:px-5 md:pt-5 md:pb-0 rounded-t dark:border-gray-600">
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="crud-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Закрыть</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5">
+                <form name="counterparty">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        Контрагент
+                    </h3>
+                    <div class="mt-4 w-full">
+                        <label for="name" class="modal-label">Имя</label>
+                        <input type="text" id="name" class="modal-input" required placeholder="Иван Иванов">
+                        <input type="hidden" id="id" class="modal-input" value="">
+                    </div>
+                    <div class="mt-4 w-full">
+                        <label for="inn" class="modal-label">ИНН</label>
+                        <input type="text" id="inn" class="modal-input" required pattern="^\d{11}$" placeholder="12345678901">
+                    </div>
+                    <div class="mt-4 w-full">
+                        <label for="kpp" class="modal-label">КПП</label>
+                        <input type="text" id="kpp" class="modal-input" required pattern="^\d{9}$" placeholder="123456789">
+                    </div>
+                    <div class="mt-4 w-full">
+                        <label for="address" class="modal-label">Адрес</label>
+                        <textarea rows="3" id="address" class="modal-input" required minlength="1" placeholder="12345678901"></textarea>
+                    </div>
+                    <div class="flex items-center border-gray-200 rounded-b dark:border-gray-600 mt-10">
+                        <button type="submit" data-modal-hide="crud-modal" id="submit" class="w-1/2 mr-2.5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Создать</button>
+                        <button data-modal-hide="crud-modal" type="button" id="cancel" class="w-1/2 ml-2.5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Отмена</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Modal footer -->
+        </div>
+    </div>
+</div> 
+  
